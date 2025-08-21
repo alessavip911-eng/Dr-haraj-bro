@@ -1,0 +1,2 @@
+import { NextResponse } from 'next/server'; import { prisma } from '@/lib/prisma';
+export async function GET(_req:Request, ctx:{params:{id:string}}){ const id=Number(ctx.params.id); const item=await prisma.listing.findUnique({ where:{id}, include:{ seller:{ select:{ id:true, username:true, phone:true, city:true } } } }); if(!item) return NextResponse.json({error:'not_found'},{status:404}); return NextResponse.json(item); }

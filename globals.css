@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html[dir='rtl']{font-family:system-ui}
+body{background:#f7f7f7;color:#111}
+.container{max-width:1080px;margin:0 auto;padding:16px}
+.card{background:#fff;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.06);border:1px solid #eee}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:10px 14px;background:#111;color:#fff;text-decoration:none}
+.input{width:100%;border:1px solid #e5e5e5;border-radius:12px;padding:10px 12px}
+.label{color:#666;font-size:12px}
+.badge{display:inline-block;background:#f1f3f5;padding:4px 8px;border-radius:99px;font-size:12px;color:#333}
